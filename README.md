@@ -6,6 +6,20 @@ This wrapper is a modification of https://github.com/FraWolf/wynncraft.js, all r
 You only have a limited amount of API Calls per a certain period of time, this can differ per API endpoint. Please read more on the official documentation of the API. 
 https://docs.wynncraft.com/
 
+
+# Table of Contents
+- [WynnJS](#wynnjs)
+  * [Introduction](#introduction)
+  * [Installation via Node Package Manager](#installation-via-node-package-manager)
+  * [Usage](#usage)
+    + [Initialization](#initialization)
+    + [fetchPlayer](#fetchplayer)
+    + [fetchItem](#fetchitem)
+    + [fetchIngredient](#fetchingredient)
+    + [fetchGuild](#fetchguild)
+    + [fetchServers](#fetchservers)
+    + [fetchTerritories](#fetchterritories)
+
 ## Installation via Node Package Manager
 To get the latest version of WynnJS please use the following command in a command prompt.
 ```
