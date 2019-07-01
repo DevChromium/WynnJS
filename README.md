@@ -7,8 +7,9 @@ You only have a limited amount of API Calls per a certain period of time, this c
 https://docs.wynncraft.com/
 
 ## Installation via Node Package Manager
+To get the latest version of WynnJS please use the following command in a command prompt.
 ```
-npm i --save @devchromium/wynnjs
+npm i --save @devchromium/wynnjs@latest
 ```
 
 
