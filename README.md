@@ -15,12 +15,16 @@ npm i --save @devchromium/wynnjs@latest
 
 
 ## Usage
-### fetchPlayer
-This will return the player object from the username you input.
+
+### Initialization
 ```JS
 const wynnJS = require("@devchromium/wynnjs");
 const wynn = new WynnJS();
+```
 
+### fetchPlayer
+This will return the player object from the username you input.
+```JS
 let username = // code to get username
 wynn.fetchPlayer(username)
 .then(res => {
@@ -34,9 +38,6 @@ wynn.fetchPlayer(username)
 ### fetchItem
 This will return the item object from the item name you input.
 ```JS
-const wynnJS = require("@devchromium/wynnjs");
-const wynn = new WynnJS();
-
 let item = // code to get itemname
 wynn.fetchItem(item)
 .then(res => {
@@ -51,9 +52,6 @@ wynn.fetchItem(item)
 ### fetchIngredient
 This will return the ingredient object from the ingredient name you input.
 ```JS
-const wynnJS = require("@devchromium/wynnjs");
-const wynn = new WynnJS();
-
 let ingredient = // code to get ingredient
 wynn.fetchIngredient(ingredient)
 .then(res => {
@@ -67,9 +65,6 @@ wynn.fetchIngredient(ingredient)
 ### fetchGuild
 This will return the guild object from the guild name you input (This does not work with guild prefixes).
 ```JS
-const wynnJS = require("@devchromium/wynnjs");
-const wynn = new WynnJS();
-
 let guild = // code to get guild
 wynn.fetchGuild(guild)
 .then(res => {
@@ -83,9 +78,6 @@ wynn.fetchGuild(guild)
 ### fetchServers
 This will return all servers on the network.
 ```JS
-const wynnJS = require("@devchromium/wynnjs");
-const wynn = new WynnJS();
-
 wynn.fetchServers()
 .then(res => {
     // Code to display result
@@ -98,9 +90,6 @@ wynn.fetchServers()
 ### fetchTerritories
 This will return all the territories.
 ```JS
-const wynnJS = require("@devchromium/wynnjs");
-const wynn = new WynnJS();
-
 wynn.fetchTerritories()
 .then(res => {
     // Code to display result
