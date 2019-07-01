@@ -1,66 +1,27 @@
-const req = require('request')
+const fetchItem = require('./api/v1/fetchItem');
+const fetchPlayer = require('./api/v2/fetchPlayer');
+const fetchGuild = require('./api/v1/fetchGuild');
+const fetchIngredient = require('./api/v2/fetchIngredient');
+const fetchServers = require('./api/v1/fetchServers');
+const fetchTerritories = require('./api/v1/fetchTerritories');
 module.exports = class WynnJS {
 
     constructor() {
-        
+        super(
+            this.fetchItem = fetchItem,
+            this.fetchPlayer = fetchPlayer,
+            this.fetchGuild = fetchGuild,
+            this.fetchIngredient = fetchIngredient,
+            this.fetchServers = fetchServers,
+            this.fetchTerritories = fetchTerritories
+        )
     }
 
-      fetchItem(item) {
-        return new Promise((resolve, reject) => {
-            if (!item || typeof item !== 'string') return reject(new TypeError('Invalid item.'));
-            let endpoint = `https://api.wynncraft.com/public_api.php?action=itemDB&search=${item.toString()}`;
-            req.get(endpoint, (err, res, body) => {
-                if(!error && res.statusCode == '200') { return resolve(JSON.parse(body)); } else { return reject(JSON.parse(body)); }
-            });
-        });
-    }
-
-    fetchPlayer(username) {
-        return new Promise((resolve, reject) => {
-            if(!username || typeof username !== 'string') return reject(new TypeError("Invalid username"));
-            let endpoint = `https://api.wynncraft.com/v2/player/${username}/stats`
-            req.get(endpoint, (err, res, body) => {
-                if(!error && res.statusCode == '200') { return resolve(JSON.parse(body)); } else { return reject(JSON.parse(body)); }
-            });
-        });
-    }
-
-    fetchGuild(guild) {
-        return new Promise((resolve, reject) => {
-            if(!guild || typeof guild !== 'string') return reject(new TypeError("Invalid guild"));
-            let endpoint = `https://api.wynncraft.com/public_api.php?action=guildStats&command=${guild}`
-            req.get(endpoint, (err, res, body) => {
-                if(!error && res.statusCode == '200') { return resolve(JSON.parse(body)); } else { return reject(JSON.parse(body)); }
-            });
-        });
-    }
-
-    fetchIngredient(ingredient) {
-        return new Promise((resolve, reject) => {
-            if(!ingredient || typeof ingredient !== 'string') return reject(new TypeError("Invalid ingredient"));
-            let endpoint = `https://api.wynncraft.com/v2/ingredient/get/${ingredient}}`
-            req.get(endpoint, (err, res, body) => {
-                if(!error && res.statusCode == '200') { return resolve(JSON.parse(body)); } else { return reject(JSON.parse(body)); }
-            });
-        });
-    }
-
-    fetchServers() {
-        return new Promise((resolve, reject) => {
-            let endpoint = `https://api.wynncraft.com/public_api.php?action=onlinePlayers`
-            req.get(endpoint, (err, res, body) => {
-                if(!error && res.statusCode == '200') { return resolve(JSON.parse(body)); } else { return reject(JSON.parse(body)); }
-            });
-        });
-    }
-
-    fetchTerritories() {
-        return new Promise((resolve, reject) => {
-            let endpoint = `https://api.wynncraft.com/public_api.php?action=territoryList`
-            req.get(endpoint, (err, res, body) => {
-                if(!error && res.statusCode == '200') { return resolve(JSON.parse(body)); } else { return reject(JSON.parse(body)); }
-            });
-        });
-    }
+    async fetchItem(item);
+    async fetchPlayer(username);
+    async fetchGuild(guild);
+    async fetchIngredient(ingredient);
+    async fetchServers();
+    async fetchTerritories();
 
 }
