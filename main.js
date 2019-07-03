@@ -4,6 +4,11 @@ const fetchGuild = require('./api/v1/fetchGuild');
 const fetchIngredient = require('./api/v2/fetchIngredient');
 const fetchServers = require('./api/v1/fetchServers');
 const fetchTerritories = require('./api/v1/fetchTerritories');
+const fetchGuildLeaderboard = require('./api/v1/fetchGuildLeaderboard');
+const fetchPlayerLeaderboard = require('./api/v1/fetchPlayerLeaderboard');
+const fetchPvPLeaderboard = require('./api/v1/fetchPvPLeaderboard');
+const search = require('./api/v1/search');
+
 module.exports = class WynnJS {
 
     constructor() {
@@ -12,7 +17,11 @@ module.exports = class WynnJS {
             this.fetchGuild = fetchGuild,
             this.fetchIngredient = fetchIngredient,
             this.fetchServers = fetchServers,
-            this.fetchTerritories = fetchTerritories
+            this.fetchTerritories = fetchTerritories,
+            this.fetchGuildLeaderboard = fetchGuildLeaderboard,
+            this.fetchPlayerLeaderboard = fetchPlayerLeaderboard,
+            this.fetchPvPLeaderboard = fetchPvPLeaderboard,
+            this.search = search
     }
 
 }
