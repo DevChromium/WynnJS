@@ -1,4 +1,4 @@
-const axios = require("axios"); 
+const req = require("request")
 
 module.exports = async function fetchGuildList() {
     return new Promise((resolve, reject) => {
