@@ -2,6 +2,9 @@
 A JavaScript wrapper for the official Wynncraft API, if you wish you may contribute to the wrapper.
 This wrapper is a modification of https://github.com/FraWolf/wynncraft.js, all rights of the fetchPlayer and fetchItem goes to the author of wynncraft.js.
 
+## Important
+This wrapper is really outdated and is not in use anymore, if you want to contribute to it upgrading it. Feel free to do so.
+
 ## Introduction
 You only have a limited amount of API Calls per a certain period of time, this can differ per API endpoint. Please read more on the official documentation of the API. 
 https://docs.wynncraft.com/
